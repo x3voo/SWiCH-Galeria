@@ -1,0 +1,17 @@
+<form action="" method="POST" class="addResForm" enctype="multipart/form-data">
+	<p><b><i>Nowe zdjęcie</i></b></p><br>
+	<label for="imageFile">Pilk:</label><br>
+	<input type="file" name="imageFile" value=""><br>
+	<label for="imageName">Nazwa:</label><br>
+	<input type="text" name="imageName" value=""><br>
+	<label for="imageDescription">Komentarz:</label><br>
+	<input type="textarea" name="imageDescription" value=""><br>
+	<label for="imageFormat">Format:</label><br>
+	<input type="text" name="imageFormat" value="" disabled><br>
+	<label for="imageCategory">Kategoria:</label><br>
+	<input type="text" name="imageCategory" value=""><br>
+	<label for="imageAccess">Uprawnienia:</label><br>
+	<input type="radio" name="imageAccess" value="private"> Prywatny
+	<input type="radio" name="imageAccess" value="public"> Publiczny (dla Grupy)<br><br>
+	<input type="submit" value="Dodaj" name="dodaj_zdjecie">
+</form>
