@@ -86,8 +86,10 @@ try {
 	//broken !!!
 	//$vidPath = dirname(__FILE__).DIRECTORY_SEPARATOR.'storage'.DIRECTORY_SEPARATOR.'secret0.mp4';;
 	
+	$vidPath = mysqli_real_escape_string($dbHook, "\storage\secret0.mp4");
+	
 	$query = "
-		INSERT INTO `zdjecia_i_filmy` (`id_m`, `nazwa`, `komentarz`, `format`, `kategoria`, `histogram_kolorow`, `referencja_do_filmu`, `zdjecie_pbko`, `wlasnosc_pbko`) VALUES (NULL, 'Sekretny film', 'pog', 'video/mp4', 'Real', 0, '\\storage\\secret0.mp4', NULL, '1')
+		INSERT INTO `zdjecia_i_filmy` (`id_m`, `nazwa`, `komentarz`, `format`, `kategoria`, `histogram_kolorow`, `referencja_do_filmu`, `zdjecie_pbko`, `wlasnosc_pbko`) VALUES (NULL, 'Sekretny film', 'pog', 'video/mp4', 'Real', 0, '".$vidPath."', NULL, '1')
 	";
 	$res = mysqli_query($dbHook, $query);
 	
